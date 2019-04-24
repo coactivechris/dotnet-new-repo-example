@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Coactive",
+  "classifications": [ "Repository", "DynamoDB" ], 
+  "name": "Coactive DynamoDB Repository",
+  "identity": "Coactive.Repositories.DynamoDB",         
+  "groupIdentity":"Coactive",
+  "shortName": "coactive-dyn-repo",
+  "tags": {
+    "language": "C#",
+    "type":"project"
+  },
+  "sourceName": "ModelName",
+  "preferNameDirectory": true,
+  "symbols":{
+    "model-name": {
+      "type": "parameter",
+      "defaultValue": "SomeModel",
+      "replaces":"ModelName"
+    },
+
+    "plural-of-model": {
+      "description": "If the plural of your model is different, then use this",
+      "type": "parameter",
+      "isRequired": false,
+      "defaultValue": "ModelNames",
+      "replaces":"ModelNames"
+    },
+
+    "primary-key-name": {
+      "type": "parameter",
+      "isRequired": false,
+      "description" : "The primary key or ID of your domain model",
+      "defaultValue": "Id",
+      "replaces":"PrimaryKeyName"
+    },
+
+    "nameLower":{
+      "type": "generated",
+      "generator": "casing",
+      "parameters": {
+        "source":"model",
+        "toLower": true
+      },
+      "replaces":"modelname_l"
+    },
+
+    "base-namespace": {
+      "type": "parameter",
+      "isRequired": true,
+      "description" : "The namespace into which you wish to place this AppService",
+      "defaultValue": "SomeNamespace",
+      "replaces":"DefaultNamespace"
+    }
+  }
+}

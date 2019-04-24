@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Coactive.Examples.RepoTemplate</id>
+    <version>1.0.0</version>
+    <description>
+      Creates a dynamodb repository based on a model
+    </description>
+    <authors>Chris Smith</authors>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+  </metadata>
+</package>
